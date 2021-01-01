@@ -7,22 +7,20 @@ It's stable enough to overclock cpu frequency to 2.2/1.8 GHz,
 and for better performance.
 
 Signed-off-by: Tianling Shen <cnsztl@gmail.com>
-Co-authored-by: gzelvis <gzelvis@gmail.com>
 ---
- .../boot/dts/rockchip/rk3399-nanopi4-opp.dtsi | 156 ++++++++++++++++++
+ .../boot/dts/rockchip/rk3399-nanopi4-opp.dtsi | 155 ++++++++++++++++++
  .../boot/dts/rockchip/rk3399-nanopi4.dtsi     |   2 +-
- 2 files changed, 157 insertions(+), 1 deletion(-)
+ 2 files changed, 156 insertions(+), 1 deletion(-)
  create mode 100644 arch/arm64/boot/dts/rockchip/rk3399-nanopi4-opp.dtsi
 
 --- /dev/null
 +++ b/arch/arm64/boot/dts/rockchip/rk3399-nanopi4-opp.dtsi
-@@ -0,0 +1,156 @@
+@@ -0,0 +1,155 @@
 +// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
 +/*
 + * Copyright (c) 2016-2017 Fuzhou Rockchip Electronics Co., Ltd
 + *
 + * Copyright (c) 2020 Tianling Shen <cnsztl@gmail.com>
-+ * Copyright (c) 2020 gzelvis <gzelvis@gmail.com>
 + */
 +
 +/ {
@@ -53,19 +51,19 @@ Co-authored-by: gzelvis <gzelvis@gmail.com>
 +		};
 +		opp05 {
 +			opp-hz = /bits/ 64 <1416000000>;
-+			opp-microvolt = <1150000>;
++			opp-microvolt = <1125000>;
 +		};
 +		opp06 {
 +			opp-hz = /bits/ 64 <1512000000>;
-+			opp-microvolt = <1200000>;
++			opp-microvolt = <1150000>;
 +		};
 + 		opp07 {
 +			opp-hz = /bits/ 64 <1608000000>;
-+			opp-microvolt = <1250000>;
++			opp-microvolt = <1200000>;
 +		};
 +		opp08 {
 +			opp-hz = /bits/ 64 <1800000000>;
-+			opp-microvolt = <1300000>;
++			opp-microvolt = <1250000>;
 +		};
 +	};
 +
@@ -104,15 +102,15 @@ Co-authored-by: gzelvis <gzelvis@gmail.com>
 +		};
 +		opp07 {
 +			opp-hz = /bits/ 64 <1800000000>;
-+			opp-microvolt = <1250000>;
++			opp-microvolt = <1200000>;
 +		};
 +		opp08 {
 +			opp-hz = /bits/ 64 <2016000000>;
-+			opp-microvolt = <1350000>;
++			opp-microvolt = <1250000>;
 +		};
 +		opp09 {
 +			opp-hz = /bits/ 64 <2208000000>;
-+			opp-microvolt = <1400000>;
++			opp-microvolt = <1300000>;
 +		};
 +	};
 +

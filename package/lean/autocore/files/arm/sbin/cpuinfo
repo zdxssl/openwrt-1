@@ -22,5 +22,9 @@ else
 	else
 		cpu_temp="$(awk "BEGIN{printf (\"%.1f\n\",$(cat /sys/class/thermal/thermal_zone0/temp)/1000) }")°C"
 	fi
-	echo -n "${cpu_arch} x ${cpu_cores} (${cpu_freq}, ${cpu_temp})"
+	if grep -q "sunxi" "/etc/openwrt_release" && [ ! -f "/sys/class/thermal/thermal_zone0/temp" ]; then
+		echo -n "${cpu_arch} x ${cpu_cores})"
+	else
+		echo -n "${cpu_arch} x ${cpu_cores} (${cpu_freq}, ${cpu_temp})"
+	fi
 fi
